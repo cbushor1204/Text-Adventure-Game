@@ -1,2 +1,2 @@
-# text-adventure-game
-N/A
+# Text-Adventure-Game
+Python IDE, Text Adventure Game.
