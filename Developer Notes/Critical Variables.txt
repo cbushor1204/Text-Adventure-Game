@@ -1,0 +1,4 @@
+- Class: playerAttributes (Reference p1)
+- Class: playerStats (Reference p2)
+
+- 
