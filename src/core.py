@@ -1,4 +1,5 @@
 import sys
+import time
 import story
 
 
@@ -26,6 +27,13 @@ class playerAttributes():
 
 p1 = playerAttributes("undefined", 0, 'undefined', 0, 'undefined', 'undefined', 'undefined', 'undefined')
 p2 = playerStats(0, 0, 0, 0, 0, 0)
+
+
+def printout(str):
+  for char in str:
+    time.sleep(0.029)
+    sys.stdout.write(char)
+    sys.stdout.flush()
 
 
 def menuSettings():

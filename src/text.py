@@ -1,1 +1,0 @@
-chapterOne = "BACKSTORY: Around 15 years ago, the kindowm of Araluen a prospering and peaceful kingdom was attacked by the Skandians. The Skandians were a fierce mercenary nation to the north. The Skandians were being payed by Baron Aberlard of the Mount Ridgestone."
