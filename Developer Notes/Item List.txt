@@ -1,0 +1,18 @@
+Blazeguard Sword:
+  Power = 5
+  Chance = Guarenteed
+
+Rod of Asclepius:
+  Heath = 8
+  Heal = 3
+  Chance = Guarenteed
+
+Sunflare Daggers:
+  Power = 8
+  Agility = 3
+  Chance = 75% at Lvl 2
+
+Cometfall Shelid:
+  Protection = 5
+  Agility = -2
+  Chance = 60% at Lvl 2

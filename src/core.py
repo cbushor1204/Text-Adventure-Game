@@ -1,16 +1,16 @@
 import sys
 import time
-import story
+import random
 
 
 class playerStats():
   def __init__(self, level, health, power, agility, protection, magic):
-      self.level = level
-      self.health = health
-      self.power = power
-      self.agility = agility
-      self.protection = protection
-      self.magic = magic
+    self.level = level
+    self.health = health
+    self.power = power
+    self.agility = agility
+    self.protection = protection
+    self.magic = magic
 
 
 class playerAttributes():
@@ -25,8 +25,42 @@ class playerAttributes():
     self.favorite = favorite
 
 
+class enemyStats():
+  def __init__(self, health, power, agility, protection, magic):
+    self.health = health
+    self.power = power
+    self.agility = agility
+    self.protection = protection
+    self.magic = magic
+
+
+class playerInventory():
+  def __init__(self, item, health, power, agility, protection, magic):
+    self.item = item
+    self.health = health
+    self.power = power
+    self.agility = agility
+    self.protection = protection
+    self.magic = magic
+
+
+class playerItem():
+  def __init__(self, name, health, power, agility, protection, magic, healing, lifesteal):
+    self.name = name
+    self.health = health
+    self.power = power
+    self.agility = agility
+    self.protection = protection
+    self.magic = magic
+    self.healing = healing
+    self.lifesteal
+
+
 p1 = playerAttributes("undefined", 0, 'undefined', 0, 'undefined', 'undefined', 'undefined', 'undefined')
-p2 = playerStats(0, 0, 0, 0, 0, 0)
+p2 = playerStats(0, 0, 0, 0, 0)
+
+
+##Random Enemy Generator!!!
 
 
 def printout(str):
@@ -36,12 +70,31 @@ def printout(str):
     sys.stdout.flush()
 
 
+def storyChapterOne():
+	Progress = 1
+  e1 = enemyStats(30, 5, 0, 0, 0)
+	printout(f'')
+
+
+def storyProlouge():
+	Progress = 0
+  print('')
+  printout(f'The kingdom of Araluen was once a peacful and prosperous land. King Alexander & Queen Charlotte had been in power for 20 strong years, having 3 children; Prince {p1.name}, Prince Henry, & Princess Meredith. However, the Baron of a newly gained teritory to the north began fighting the royal families rule. Baron Seth of Mount Obsideon mounted a full fleged attack against Castle Whitefire. The siege lasting 120 days untill the attackers broke through, slaughtering the inhabitants. Fortunatly, a knight managed to assist the royal family in an escape attempt; failing the royal family was slaughtered except Prince {p1.name} managing to escape to the southern wastelands...')
+  storyChapterOne()
+
+
+def storyChapterOne():
+  print('In Developement')
+
+
+
 def menuSettings():
-    print('In Developement')
+  print('In Developement')
 
 
 def menuCredits():
-  print('In Developement')
+  print('Lead Developer: Caden Bushor')
+  print('Beta Tester: N/A')
 
 
 def menuHelp():
@@ -54,6 +107,7 @@ def gameLoad():
 
 def gameNew():
   print('WARNING: We suggest reading the Help Menu before creating a character as it provides critical information about the selections you are choosing for your character, please keep in mind that your character has the option to be edidted only ONCE outside of the character creation menu.')
+  print('ATTENTION: In the case of a numbered list, to choose an option use the NUMBER associated with desiered selection(s).')
   print('')
   p1.name = input('Character Name: ')
   p1.age = input('Character Age: ')
@@ -63,14 +117,30 @@ def gameNew():
   p1.skinColor = input('Character Skin Color: ')
   p1.height = input('Character Height (Inches): ')
 
-  print('1. Warrior - Standard Character')
-  print('2. Assassing - High Damage, Low HP, Physical')
-  print('3. Mage - Normal Damage, Normal HP, Magical')
-  print('4. Guardian - Low Damage, High Health, Physical')
-  print('5. Hunter - Normal Damage, Low HP, Physical')
-  p1.specialty = input('Character Class: ')
+  print('1. Fire')
+  print('2. Water')
+  print('3. Air')
+  print('4. Earth')
+  print('5. Light')
+  print('6. Weather')
+  p1.specialty = input('Character Element Class: ')
 
-  story.chapterOne()
+  if p1.specialty == "1":
+    p1.specialty = "Fire"
+  if p1.specialty == "2":
+    p1.specialty = "Water"
+  if p1.specialty == "3":
+    p1.specialty = "Air"
+  if p1.specialty == "4":
+    p1.specialty = "Earth"
+  if p1.specialty == "5":
+    p1.specialty = "Light"
+  if p1.specialty == "6":
+    p1.specialty = "Weather"
+
+	storyProlouge()
+
+
 
 def menuMain():
   print('Text Adventure Game')
